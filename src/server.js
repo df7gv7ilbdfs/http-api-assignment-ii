@@ -39,7 +39,7 @@ const onRequest = (request, response) => {
             break;
         }
         case '/getUsers': {
-            content = JSON.stringify(users);
+            const content = JSON.stringify(users);
 
             response.writeHead(200, { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(content, 'utf8') });
 
